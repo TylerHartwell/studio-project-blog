@@ -33,5 +33,10 @@ export const projectType = defineType({
       name: 'blogSlug',
       type: 'string',
     }),
+    defineField({
+      name: 'featuredPriority',
+      type: 'number',
+      validation: (rule) => rule.integer().min(1).warning('Priority must be a positive integer'),
+    }),
   ],
 })
