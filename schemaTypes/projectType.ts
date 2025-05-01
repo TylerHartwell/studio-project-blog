@@ -11,6 +11,11 @@ export const projectType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'brief',
+      type: 'string',
+      validation: (rule) => rule.required().max(40),
+    }),
+    defineField({
       name: 'url',
       type: 'string',
     }),
